@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #00ff00;
+    --font-family: 'Consolas', 'Monaco', monospace;
+    --scrollbar-color: #444; /* 滚动条颜色 */
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: var(--bg-color);
+}
+
+.console {
+    width: 100%;
+    max-width: 95%;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    overflow: hidden;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.console .console-header {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.console .window-controls {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.console .control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.console .close {
+    background: #ff5f56;
+}
+
+.console .minimize {
+    background: #ffbd2e;
+}
+
+.console .maximize {
+    background: #27c93f;
+}
+
+.console .console-title {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.console .console-content {
+    padding: 15px;
+    height: 324px;
+    overflow-y: scroll; /* 显示垂直滚动条 */
+}
+
+/* 定制滚动条样式 */
+.console .console-content::-webkit-scrollbar {
+    width: 8px; /* 滚动条宽度 */
+}
+
+.console .console-content::-webkit-scrollbar-track {
+    background: var(--bg-color); /* 滚动条轨道颜色 */
+}
+
+.console .console-content::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color); /* 滚动条颜色 */
+    border-radius: 4px; /* 滚动条圆角 */
+}
+
+.console .input-line {
+    display: flex;
+    margin: 5px 0;
+    align-items: flex-start;
+}
+
+.console .prompt {
+    color: #0f0;
+    margin-right: 10px;
+}
+
+.console .input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.console .typing {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.console .output {
+    color: #0f0;
+    margin: 5px 0;
+    line-height: 1.4;
+}

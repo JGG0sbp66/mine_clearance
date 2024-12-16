@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/控制台v2.css">
+</head>
+<body>
+    <div class="outerLayer">
+        
+        <div class="tab">
+            <div class="leftBoard"><span id="img_mine"></span></div>
+            <img id="ingame" src="img/ingame.jpg">
+            <div class="rightBoard">
+                <span id="img_time">
+                    <img src="img/0.png" class="timeimg" alt="0"><img src="img/0.png" class="timeimg" alt="0"><img src="img/0.png" class="timeimg" alt="0">
+                </span>
+            </div>
+        </div>
+        
+        <div class="body">
+            
+        </div>
+    </div>
+
+    <div class="console">
+        <div class="console-header">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+            <div class="console-title">Terminal</div>
+        </div>
+        <div class="console-content" id="content">
+            <div class="output">From Admin>>欢迎来到扫雷 [版本 2024.12.5]</div>
+            <div class="output">From Admin>>(c) '所谓混学' 团队出品</div>
+        </div>
+    </div>
+
+    <!-- 游戏音乐 -->
+    <!-- 游戏开始前音乐 -->
+    <audio id="audioMean" src="audio/扫雷(菜单).mp3" preload="auto" loop></audio>
+     <!-- 开始后音乐 -->
+    <audio id="audioStart" src="audio/扫雷.mp3" preload="auto" loop></audio>
+    
+    <!-- 游戏音效 -->
+    <!-- 失败音效 -->
+    <audio id="audioDefeat" src="audio/失败音效.MP3" preload="auto"></audio>
+    <!-- 胜利音效 -->
+    <audio id="audioWin" src="audio/胜利音效.MP3" preload="auto"></audio>
+    <!-- 小丑盒子爆炸倒计时 -->
+    <audio id="audioBombTime" src="audio/小丑倒计时.mp3" preload="auto"></audio>
+    <!-- 小丑和爆炸音效 -->
+    <audio id="audioBomb" src="audio/小丑盒爆炸音效.MP3" preload="auto"></audio>
+    <!-- 船长死亡轰炸 -->
+    <audio id="audioCapital" src="audio/船长死亡轰炸.MP3" preload="auto"></audio>
+    <!-- 船长笑声1 -->
+    <audio id="audioCapitalaf1" src="audio/船长笑声1.mp3" preload="auto"></audio>
+    <!-- 船长笑声2 -->
+    <audio id="audioCapitalaf2" src="audio/船长笑声2.mp3" preload="auto"></audio>
+    
+    <script src="js/输出到HTML.js"></script>
+    <script src="js/js先行版12_5.js"></script>
+    
+</body>
+</html>
